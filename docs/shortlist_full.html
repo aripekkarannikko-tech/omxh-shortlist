@@ -1,156 +1,28 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>OMXH Shortlist — Full</title>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>OMXH Shortlist — full table</title>
 <style>
-  :root { color-scheme: dark light; }
-  body {
-    margin: 0; padding: 16px;
-    background: #0b0f14; color: #e6edf3;
-    font: 14px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  :root {
+    --bg:#0b0f14; --fg:#e6edf3; --muted:#9fb1c1; --accent:#5fb3f3; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   }
-  a { color: #7dc7ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .bar {
-    position: sticky; top: 0; background: #0b0f14; padding: 8px 0 12px 0;
-    border-bottom: 1px solid #223;
-    margin-bottom:12px;
-    white-space: nowrap;
-  }
-  pre { white-space: pre; overflow: auto; }
+  html,body { margin:0; padding:0; background:var(--bg); color:var(--fg); font-family:var(--mono); }
+  header { position:sticky; top:0; background:linear-gradient(180deg, rgba(11,15,20,.97), rgba(11,15,20,.92)); padding:10px 12px; border-bottom:1px solid #1e2732; z-index:10; }
+  header a { color:var(--accent); text-decoration:none; }
+  .wrap { overflow:auto; white-space:pre; font-size:13px; line-height:1.28; padding:12px; }
+  .hint { color:var(--muted); font-size:12px; }
 </style>
 </head>
 <body>
-<div class="bar">
-  <strong>OMXH Shortlist — Full</strong> · <a href="./shortlist_full.txt">open TXT</a>
-</div>
-<pre>OMXH Shortlist – full table : generated 2025-09-23 17:23 UTC
-
-LEGEND / HOW TO READ
-- Edge v6 = all formulas (blended).
-- Edge v4 = base formulas.
-- Edge (NoVol) = without volume factors.
-- Prob Up (Anchor) = anchor model probability.
-- P(Up) Mkv1 / Mkv2 = Markov 1st and 2nd order probabilities.
-- R²(40d) = log-trend R² (1 = clean trend, 0 = random).
-- Hurst (>0.5) = trending tendency.
-- IBS = intraday bar position of close (smaller is better).
-- RSI2 = short-term RSI (smaller is better).
-- Overhead (≤+1 ATR) = number of prior swing-highs within +1 ATR overhead (smaller is better).
-- Weekly Bull = weekly EMA(10) > EMA(20).
-- M-FibBonus / KeyLvlBonus = extra score from nearby Fib/key levels.
-- RVOL20 = relative 20-day volume.
-- ATR% = ATR / Close.
-
-TRADING PLAN (compact)
-1) Buy only if Weekly Bull = True and Edge v6 ≥ 30.
-2) Prefer setups with RSI2 ≤ 20 and IBS ≤ 0.40 (dips in uptrend).
-3) Require Overhead ≤ 2, ATR% 1–4%, RVOL20 ≥ 0.9.
-4) Bonus if near M-Fib/KeyLvl (≤0.35 ATR) and NR7+Inside setup.
-5) Sell/trim when RSI2 ≥ 90 or R² breaks down and Hurst < 0.45.
-
-OMXH Shortlist – full table : generated 2025-09-23 17:20 UTC
-
-LEGEND / HOW TO READ
-- Edge v6 = all formulas (blended).
-- Edge v4 = base formulas.
-- Edge (NoVol) = without volume factors.
-- Prob Up (Anchor) = anchor model probability.
-- P(Up) Mkv1 / Mkv2 = Markov 1st and 2nd order probabilities.
-- R²(40d) = log-trend R² (1 = clean trend, 0 = random).
-- Hurst (>0.5) = trending tendency.
-- IBS = intraday bar position of close (smaller is better).
-- RSI2 = short-term RSI (smaller is better).
-- Overhead (≤+1 ATR) = number of prior swing-highs within +1 ATR overhead (smaller is better).
-- Weekly Bull = weekly EMA(10) > EMA(20).
-- M-FibBonus / KeyLvlBonus = extra score from nearby Fib/key levels.
-- RVOL20 = relative 20-day volume.
-- ATR% = ATR / Close.
-
-TRADING PLAN (compact)
-1) Buy only if Weekly Bull = True and Edge v6 ≥ 30.
-2) Prefer setups with RSI2 ≤ 20 and IBS ≤ 0.40 (dips in uptrend).
-3) Require Overhead ≤ 2, ATR% 1–4%, RVOL20 ≥ 0.9.
-4) Bonus if near M-Fib/KeyLvl (≤0.35 ATR) and NR7+Inside setup.
-5) Sell/trim when RSI2 ≥ 90 or R² breaks down and Hurst < 0.45.
-
-OMXH Shortlist – full table : generated 2025-09-23 17:13 UTC
-
-LEGEND / HOW TO READ
-- Edge v6 = all formulas (blended).
-- Edge v4 = base formulas.
-- Edge (NoVol) = without volume factors.
-- Prob Up (Anchor) = anchor model probability.
-- P(Up) Mkv1 / Mkv2 = Markov 1st and 2nd order probabilities.
-- R²(40d) = log-trend R² (1 = clean trend, 0 = random).
-- Hurst (>0.5) = trending tendency.
-- IBS = intraday bar position of close (smaller is better).
-- RSI2 = short-term RSI (smaller is better).
-- Overhead (≤+1 ATR) = number of prior swing-highs within +1 ATR overhead (smaller is better).
-- Weekly Bull = weekly EMA(10) > EMA(20).
-- M-FibBonus / KeyLvlBonus = extra score from nearby Fib/key levels.
-- RVOL20 = relative 20-day volume.
-- ATR% = ATR / Close.
-
-TRADING PLAN (compact)
-1) Buy only if Weekly Bull = True and Edge v6 ≥ 30.
-2) Prefer setups with RSI2 ≤ 20 and IBS ≤ 0.40 (dips in uptrend).
-3) Require Overhead ≤ 2, ATR% 1–4%, RVOL20 ≥ 0.9.
-4) Bonus if near M-Fib/KeyLvl (≤0.35 ATR) and NR7+Inside setup.
-5) Sell/trim when RSI2 ≥ 90 or R² breaks down and Hurst < 0.45.
-
-OMXH Shortlist – full table : generated 2025-09-23 16:57 UTC
-
-LEGEND / HOW TO READ
-- Edge v6 = all formulas (blended).
-- Edge v4 = base formulas.
-- Edge (NoVol) = without volume factors.
-- Prob Up (Anchor) = anchor model probability.
-- P(Up) Mkv1 / Mkv2 = Markov 1st and 2nd order probabilities.
-- R²(40d) = log-trend R² (1 = clean trend, 0 = random).
-- Hurst (>0.5) = trending tendency.
-- IBS = intraday bar position of close (smaller is better).
-- RSI2 = short-term RSI (smaller is better).
-- Overhead (≤+1 ATR) = number of prior swing-highs within +1 ATR overhead (smaller is better).
-- Weekly Bull = weekly EMA(10) > EMA(20).
-- M-FibBonus / KeyLvlBonus = extra score from nearby Fib/key levels.
-- RVOL20 = relative 20-day volume.
-- ATR% = ATR / Close.
-
-TRADING PLAN (compact)
-1) Buy only if Weekly Bull = True and Edge v6 ≥ 30.
-2) Prefer setups with RSI2 ≤ 20 and IBS ≤ 0.40 (dips in uptrend).
-3) Require Overhead ≤ 2, ATR% 1–4%, RVOL20 ≥ 0.9.
-4) Bonus if near M-Fib/KeyLvl (≤0.35 ATR) and NR7+Inside setup.
-5) Sell/trim when RSI2 ≥ 90 or R² breaks down and Hurst < 0.45.
-
-OMXH Shortlist – full table : generated 2025-09-23 16:55 UTC
-
-LEGEND / HOW TO READ
-- Edge v6 = all formulas (blended).
-- Edge v4 = base formulas.
-- Edge (NoVol) = without volume factors.
-- Prob Up (Anchor) = anchor model probability.
-- P(Up) Mkv1 / Mkv2 = Markov 1st and 2nd order probabilities.
-- R²(40d) = log-trend R² (1 = clean trend, 0 = random).
-- Hurst (>0.5) = trending tendency.
-- IBS = intraday bar position of close (smaller is better).
-- RSI2 = short-term RSI (smaller is better).
-- Overhead (≤+1 ATR) = number of prior swing-highs within +1 ATR overhead (smaller is better).
-- Weekly Bull = weekly EMA(10) > EMA(20).
-- M-FibBonus / KeyLvlBonus = extra score from nearby Fib/key levels.
-- RVOL20 = relative 20-day volume.
-- ATR% = ATR / Close.
-
-TRADING PLAN (compact)
-1) Buy only if Weekly Bull = True and Edge v6 ≥ 30.
-2) Prefer setups with RSI2 ≤ 20 and IBS ≤ 0.40 (dips in uptrend).
-3) Require Overhead ≤ 2, ATR% 1–4%, RVOL20 ≥ 0.9.
-4) Bonus if near M-Fib/KeyLvl (≤0.35 ATR) and NR7+Inside setup.
-5) Sell/trim when RSI2 ≥ 90 or R² breaks down and Hurst < 0.45.
-
-=== Ranked (v6 blended score (default)) ===  (wrapped ≤1000000 chars)
+<header>
+  <div><strong>OMXH Shortlist — full table</strong> · generated 2025-09-23 17:30 UTC ·
+    <a href="shortlist_full.txt" target="_blank">open TXT</a>
+  </div>
+  <div class="hint">Side-scroll if needed. Alignment preserved via &lt;pre&gt; formatting.</div>
+</header>
+<div class="wrap"><pre>=== Ranked (v6 blended score (default)) ===  (wrapped ≤1000000 chars)
 Ticker     | Edge v6 | Edge v4 | Edge (NoVol) | Prob Up (Anchor) | P(Up) Mkv1 | P(Up) Mkv2 | Analogs | Weekly Bull | IBS   | R²(40d) | RSI2 | Hurst | PermEnt | DomCycle | M-Fib | M-FibBonus | KeyLvlBonus | KeyHits                              | FibRet  | FibScore | Overhead (≤+1 ATR) | Close | ATR%  | RVOL20 | ADV20 €   
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ILKKA2.HE  |   30.32 |   24.71 |        11.94 |            57.1% |      45.5% |      44.2% |      12 |        True | 0.000 |   0.665 | 41.6 | 1.020 |   0.974 |        5 |   nan |        0.0 |         3.7 |      PivotLow:3.7800;PivotLow:3.7700 |   0.000 |      0.0 |                  2 |  3.78 |  1.7% |   0.04 |     27,793
@@ -335,5 +207,6 @@ TULAV.HE   |    0.00 |    0.00 |         0.00 |            26.4% |      33.9% | 
 VIAFIN.HE  |    0.00 |    0.00 |         0.00 |            15.6% |      29.9% |      29.0% |      30 |       False | 1.000 |   0.001 | 74.6 | 1.011 |   0.960 |        5 |   nan |        0.0 |         3.8 |      PivotHigh:19.9500;Round:20.0000 |   0.000 |      0.0 |                  0 | 19.95 |  2.3% |   0.55 |     32,485
 VINCIT.HE  |    0.00 |    0.00 |         0.00 |            33.3% |      39.2% |      36.8% |      46 |       False | 1.000 |   0.415 | 86.5 | 1.025 |   0.964 |        5 |   nan |        0.0 |         2.5 |     PivotHigh:1.4750;PivotLow:1.4850 |   0.000 |      0.0 |                  2 |  1.48 |  2.3% |   0.92 |      6,003
 WETTERI.HE |    0.00 |    0.00 |         0.00 |            23.3% |      31.3% |      32.2% |      41 |       False |       |   0.156 | 93.1 | 0.995 |   0.945 |        5 |   nan |        0.0 |         3.3 |        PivotHigh:0.2180;EMA50:0.2162 |   0.000 |      0.0 |                  1 |  0.22 |  3.7% |   0.00 |     19,658
-</pre>
-</body></html>
+</pre></div>
+</body>
+</html>
