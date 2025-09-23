@@ -1,7 +1,38 @@
 <!doctype html>
-<meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OMXH Shortlist</title>
-<body style="font:16px system-ui; margin:24px">
-  <h1>OMXH Shortlist</h1>
-  <p><a href="latest.txt">Open latest.txt</a> (this will be updated by the bot)</p>
-</body>
+<style>
+  :root{--bg:#0b0d10;--fg:#dfe6ee;--mut:#9aa7b5;--card:#12161c;}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1.35 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
+  header{position:sticky;top:0;background:var(--card);padding:10px 12px;border-bottom:1px solid #1e2430;display:flex;gap:12px;align-items:center;z-index:2;}
+  main{height:calc(100% - 52px);}
+  pre#out{margin:0;padding:12px;white-space:pre;overflow:auto;height:100%;}
+  #meta{margin-left:auto;color:#9aa7b5;font-size:12px}
+  button, a.btn{background:#1b2330;color:var(--fg);border:1px solid #2a3242;border-radius:8px;padding:6px 10px;cursor:pointer}
+</style></head>
+<body>
+  <header>
+    <div style="font-weight:700">OMXH Shortlist</div>
+    <a class="btn" href="./shortlist_full.txt" target="_blank">Open raw TXT</a>
+    <label><input type="checkbox" id="wrapChk"> Wrap lines</label>
+    <button id="refreshBtn">Refresh</button>
+    <div id="meta"></div>
+  </header>
+  <main>
+    <pre id="out"></pre>
+  </main>
+<script>
+async function loadTxt(){
+  const res = await fetch('./shortlist_full.txt?ts='+Date.now());
+  const text = await res.text();
+  document.getElementById('out').textContent = text;
+  const tsLine = (text.match(/Generated: .* UTC/)||[''])[0];
+  document.getElementById('meta').textContent = tsLine || '';
+}
+document.getElementById('refreshBtn').onclick = loadTxt;
+document.getElementById('wrapChk').onchange = (e)=>{
+  document.getElementById('out').style.whiteSpace = e.target.checked ? 'pre-wrap' : 'pre';
+};
+loadTxt();
+</script>
+</body></html>
