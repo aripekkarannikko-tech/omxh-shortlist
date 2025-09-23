@@ -1,3 +1,33 @@
+OMXH Shortlist — 2025-09-23 10:58 UTC
+
+Legend (key columns):
+- Edge v6  : blended score from full model (all features)
+- Edge v4  : baseline score (core features)
+- NoVol    : score without any volume features
+- Prob Up  : 1–3 session up probability (anchored variant)
+- Mkv1/2   : Markov-chain up probability variants
+- Analogs  : matched historical analog days count
+- Weekly   : True if weekly trend/breadth filter is bullish
+- IBS      : Internal Bar Strength (lower can be better for mean-rev)
+- R²(40d)  : 40-day log-fit R² (closer to 1 => cleaner trend)
+- RSI2     : 2‑period RSI (lower can be better for mean-rev)
+- Hurst    : >0.5 trending, <0.5 mean‑reverting
+- PermEnt  : lower = more structured (potentially tradeable)
+- DomCycle : dominant cycle length estimate (ACF-based)
+- M‑Fib    : Monthly Fib retracement cluster
+- KeyLvls  : proximity bonus to pivots/RN/MA
+- Overhead : resistance overhead within +1 ATR (lower is better)
+- RVOL20   : 20‑day relative volume
+- ADV20 €  : average daily euro volume (liquidity)
+
+Trading play (compressed):
+- Universe filter: ADV20 ≥ €25k, stable data ✓
+- Setup A (trend‑pullback): Weekly=True, Hurst>0.5, R² high, RSI2 5–40, low Overhead.
+- Setup B (mean‑reversion): Weekly off OR IBS<0.2 AND RSI2<10 near support (KeyHits); avoid high overhead.
+- Risk: size by ATR(14), 1R stop beyond swing or 1.2×ATR; take partials at +1R/+2R or at Fib/Key levels.
+- Optional confirms: Analogs>10, Markov up‑prob >50%.
+
+=============================================================================
 LEGEND / HOW TO READ:
 Edge v6 = kaikki kaavat (blended).  Edge v4 = perus kaavat.  Edge (NoVol) = ilman volyymia.
 Prob Up (Anchor) = ankkurimalli; P(Up) Mkv1/Mkv2 = Markov 1. ja 2. asteen todennäköisyys.
