@@ -1,3 +1,28 @@
+OMXH Shortlist – full table : generated 2025-09-23 17:20 UTC
+
+LEGEND / HOW TO READ
+- Edge v6 = all formulas (blended).
+- Edge v4 = base formulas.
+- Edge (NoVol) = without volume factors.
+- Prob Up (Anchor) = anchor model probability.
+- P(Up) Mkv1 / Mkv2 = Markov 1st and 2nd order probabilities.
+- R²(40d) = log-trend R² (1 = clean trend, 0 = random).
+- Hurst (>0.5) = trending tendency.
+- IBS = intraday bar position of close (smaller is better).
+- RSI2 = short-term RSI (smaller is better).
+- Overhead (≤+1 ATR) = number of prior swing-highs within +1 ATR overhead (smaller is better).
+- Weekly Bull = weekly EMA(10) > EMA(20).
+- M-FibBonus / KeyLvlBonus = extra score from nearby Fib/key levels.
+- RVOL20 = relative 20-day volume.
+- ATR% = ATR / Close.
+
+TRADING PLAN (compact)
+1) Buy only if Weekly Bull = True and Edge v6 ≥ 30.
+2) Prefer setups with RSI2 ≤ 20 and IBS ≤ 0.40 (dips in uptrend).
+3) Require Overhead ≤ 2, ATR% 1–4%, RVOL20 ≥ 0.9.
+4) Bonus if near M-Fib/KeyLvl (≤0.35 ATR) and NR7+Inside setup.
+5) Sell/trim when RSI2 ≥ 90 or R² breaks down and Hurst < 0.45.
+
 OMXH Shortlist – full table : generated 2025-09-23 17:13 UTC
 
 LEGEND / HOW TO READ
